@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		304FDFC624A4D98A0005A554 /* PriyaResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PriyaResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		304FDFC624A4D98A0005A554 /* Priya's Resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Priya's Resume.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		304FDFC924A4D98A0005A554 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		304FDFCB24A4D98A0005A554 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		304FDFCD24A4D98A0005A554 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		304FDFC724A4D98A0005A554 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				304FDFC624A4D98A0005A554 /* PriyaResume.app */,
+				304FDFC624A4D98A0005A554 /* Priya's Resume.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,13 +58,29 @@
 			children = (
 				304FDFC924A4D98A0005A554 /* AppDelegate.swift */,
 				304FDFCB24A4D98A0005A554 /* SceneDelegate.swift */,
-				304FDFCD24A4D98A0005A554 /* ViewController.swift */,
-				304FDFCF24A4D98A0005A554 /* Main.storyboard */,
+				304FDFDD24A4DA8C0005A554 /* Controller */,
+				304FDFDE24A4DA9B0005A554 /* View */,
 				304FDFD224A4D98C0005A554 /* Assets.xcassets */,
 				304FDFD424A4D98C0005A554 /* LaunchScreen.storyboard */,
 				304FDFD724A4D98C0005A554 /* Info.plist */,
 			);
 			path = PriyaResume;
+			sourceTree = "<group>";
+		};
+		304FDFDD24A4DA8C0005A554 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				304FDFCD24A4D98A0005A554 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		304FDFDE24A4DA9B0005A554 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				304FDFCF24A4D98A0005A554 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,7 +100,7 @@
 			);
 			name = PriyaResume;
 			productName = PriyaResume;
-			productReference = 304FDFC624A4D98A0005A554 /* PriyaResume.app */;
+			productReference = 304FDFC624A4D98A0005A554 /* Priya's Resume.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -287,12 +303,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4SGCD6D39K;
 				INFOPLIST_FILE = PriyaResume/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.priyadharshinitamilarasan.PriyaResume;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Priya's Resume";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,12 +322,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4SGCD6D39K;
 				INFOPLIST_FILE = PriyaResume/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.priyadharshinitamilarasan.PriyaResume;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Priya's Resume";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
