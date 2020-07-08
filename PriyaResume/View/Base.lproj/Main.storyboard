@@ -9,25 +9,95 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Resume View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Priya_s_Resume" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ResumeViewController" customModule="Priya_s_Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ron-NK-iTc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HeadingCell" rowHeight="156" id="GuK-oh-9oT" customClass="HeadingTableViewCell" customModule="Priya_s_Resume" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="156"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GuK-oh-9oT" id="1Sg-XX-t6f">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="156"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5tE-K5-IEi">
+                                                    <rect key="frame" x="20" y="5" width="374" height="146"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAA-ck-25a">
+                                                            <rect key="frame" x="10" y="61" width="354" height="24.5"/>
+                                                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                                            <color key="textColor" name="NormalPurple"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="Pink"/>
+                                                    <constraints>
+                                                        <constraint firstItem="iAA-ck-25a" firstAttribute="leading" secondItem="5tE-K5-IEi" secondAttribute="leading" constant="10" id="FUB-sA-0pR"/>
+                                                        <constraint firstAttribute="trailing" secondItem="iAA-ck-25a" secondAttribute="trailing" constant="10" id="R3h-aB-zy4"/>
+                                                        <constraint firstItem="iAA-ck-25a" firstAttribute="centerY" secondItem="5tE-K5-IEi" secondAttribute="centerY" id="yRc-z7-hLZ"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="5tE-K5-IEi" firstAttribute="leading" secondItem="1Sg-XX-t6f" secondAttribute="leading" constant="20" id="E6G-Xp-j30"/>
+                                                <constraint firstItem="5tE-K5-IEi" firstAttribute="top" secondItem="1Sg-XX-t6f" secondAttribute="top" constant="5" id="KaK-ej-6u3"/>
+                                                <constraint firstAttribute="bottom" secondItem="5tE-K5-IEi" secondAttribute="bottom" constant="5" id="f21-Yq-9nf"/>
+                                                <constraint firstAttribute="trailing" secondItem="5tE-K5-IEi" secondAttribute="trailing" constant="20" id="wEV-Ss-5P7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="headingLabel" destination="iAA-ck-25a" id="VH4-fd-Dd5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="jHQ-as-cR3"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="VEW-dH-GpG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" name="DeepPurple"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ron-NK-iTc" secondAttribute="trailing" id="Z7t-4c-tpl"/>
+                            <constraint firstItem="Ron-NK-iTc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kQi-8U-1WG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ron-NK-iTc" secondAttribute="bottom" id="man-K2-7of"/>
+                            <constraint firstItem="Ron-NK-iTc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="x3G-Ob-bxH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="resumeTableView" destination="Ron-NK-iTc" id="xmu-YN-ktZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="130"/>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
     <resources>
         <namedColor name="DeepPurple">
             <color red="0.21199999749660492" green="0.18799999356269836" blue="0.38400000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NormalPurple">
+            <color red="0.30199998617172241" green="0.29800000786781311" blue="0.49000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Pink">
+            <color red="0.84700000286102295" green="0.72500002384185791" blue="0.76499998569488525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
