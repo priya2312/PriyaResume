@@ -60,6 +60,31 @@ class ResumeViewController: UIViewController {
         }
     }
 
+    
+    @IBAction func angelListPressed(_ sender: UIButton) {
+        
+        if let url = URL(string: K.externalUrls.angelist) {
+            UIApplication.shared.open(url)
+        }
+        
+    }
+    
+    @IBAction func linkedinPressed(_ sender: UIButton) {
+        
+        if let url = URL(string: K.externalUrls.linkedIn) {
+            UIApplication.shared.open(url)
+        }
+        
+    }
+    
+    @IBAction func githubPressed(_ sender: UIButton) {
+        
+        if let url = URL(string: K.externalUrls.github) {
+            UIApplication.shared.open(url)
+        }
+        
+    }
+    
 }
 
 extension ResumeViewController: UITableViewDelegate, UITableViewDataSource {

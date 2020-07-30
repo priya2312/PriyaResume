@@ -119,4 +119,12 @@ struct K {
         
     }
     
+    struct externalUrls {
+        
+        static let linkedIn = "https://in.linkedin.com/in/priyadharshini-tamilarasan"
+        static let github = "https://github.com/priya2312"
+        static let angelist = "https://angel.co/u/priyadharshini-tamilarasan"
+        
+    }
+    
 }
